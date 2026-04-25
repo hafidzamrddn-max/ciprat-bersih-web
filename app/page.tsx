@@ -8,10 +8,8 @@ export default function Home() {
       <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            {/* Circular Business Logo Placeholder */}
-            <div className="w-12 h-12 rounded-full bg-gradient-to-tr from-primary to-secondary flex items-center justify-center text-white shadow-lg shadow-primary/20">
-              <Droplets className="w-6 h-6" />
-            </div>
+            {/* Business Logo */}
+            <Image src="/logo.png" alt="Ciprat Bersih Logo" width={48} height={48} className="w-12 h-12" />
             <span className="text-xl font-bold text-gray-900 tracking-tight">Ciprat Bersih</span>
           </div>
           <a
@@ -92,6 +90,19 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Pricelist Section */}
+        <section className="py-24 bg-blue-50/30">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-gray-900">Our Services & Pricing</h2>
+              <p className="text-gray-500 mt-4 max-w-2xl mx-auto text-lg">Transparent and affordable pricing for maximum cleanliness.</p>
+            </div>
+            <div className="max-w-2xl mx-auto rounded-3xl overflow-hidden shadow-2xl shadow-blue-900/10 border border-white">
+              <Image src="/pricelist.png" alt="Ciprat Bersih Pricelist" width={800} height={1000} className="w-full h-auto object-contain bg-white" />
+            </div>
+          </div>
+        </section>
+
         {/* Gallery / Before After Section */}
         <section className="py-24 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -101,24 +112,18 @@ export default function Home() {
             </div>
             
             <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              {/* Before Placeholder */}
+              {/* Before Image */}
               <div className="relative group">
-                <div className="aspect-[4/3] bg-gray-200 rounded-2xl overflow-hidden flex items-center justify-center relative shadow-md">
-                  <span className="text-gray-400 font-medium text-lg flex items-center gap-2">
-                    <ImageIcon className="w-6 h-6" />
-                    Before Wash Image
-                  </span>
+                <div className="aspect-[4/3] bg-gray-200 rounded-2xl overflow-hidden relative shadow-md">
+                  <Image src="/sebelum.jpg" alt="Before Wash" fill className="object-cover" />
                 </div>
                 <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-sm text-white px-4 py-1.5 rounded-lg text-sm font-medium">Before</div>
               </div>
               
-              {/* After Placeholder */}
+              {/* After Image */}
               <div className="relative group">
-                <div className="aspect-[4/3] bg-blue-100 rounded-2xl overflow-hidden flex items-center justify-center relative shadow-lg shadow-blue-900/10 border-2 border-white">
-                   <span className="text-primary/60 font-medium text-lg flex items-center gap-2">
-                    <ImageIcon className="w-6 h-6" />
-                    After Wash Image
-                  </span>
+                <div className="aspect-[4/3] bg-blue-100 rounded-2xl overflow-hidden relative shadow-lg shadow-blue-900/10 border-2 border-white">
+                  <Image src="/sesudah.png" alt="After Wash" fill className="object-cover" />
                 </div>
                 <div className="absolute top-4 left-4 bg-primary text-white px-4 py-1.5 rounded-lg text-sm font-medium shadow-sm">After</div>
               </div>
@@ -168,8 +173,8 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-gray-50 border-t border-gray-100 py-12 mt-auto">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
-          <div className="w-12 h-12 rounded-full bg-gradient-to-tr from-primary to-secondary flex items-center justify-center text-white mb-6">
-            <Droplets className="w-6 h-6" />
+          <div className="mb-6">
+            <Image src="/logo.png" alt="Ciprat Bersih Logo" width={64} height={64} className="w-16 h-16" />
           </div>
           <h2 className="text-xl font-bold text-gray-900 mb-6">Ciprat Bersih</h2>
           
