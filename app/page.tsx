@@ -294,7 +294,7 @@ export default function Home() {
               >
                 {/* Before Image */}
                 <Image
-                  src="/before-shoe.png"
+                  src="/before-shoe.jpg"
                   alt="Sepatu Sebelum Dicuci"
                   fill
                   className={`object-cover ba-image ${
@@ -303,7 +303,7 @@ export default function Home() {
                 />
                 {/* After Image */}
                 <Image
-                  src="/after-shoe.png"
+                  src="/after-shoe.jpg"
                   alt="Sepatu Sesudah Dicuci"
                   fill
                   className={`object-cover ba-image absolute inset-0 ${
@@ -430,6 +430,75 @@ export default function Home() {
                 <div className="relative aspect-[1/1.25] overflow-hidden">
                   <Image
                     src="/testimoni-2.png"
+                    alt="Testimoni WhatsApp"
+                    fill
+                    className="object-cover object-top"
+                  />
+                </div>
+              </div>
+
+              {/* Testimonial 3 */}
+              <div className="testimonial-card">
+                <div className="p-6 pb-4">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                      <Star className="w-5 h-5 text-primary" />
+                    </div>
+                    <div>
+                      <p className="font-bold text-gray-900 text-sm">Pelanggan Ciprat Bersih</p>
+                      <div className="flex gap-0.5">
+                        {[...Array(5)].map((_, i) => (
+                          <Star
+                            key={i}
+                            className="w-3 h-3 fill-yellow-400 text-yellow-400"
+                          />
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                  <p className="text-gray-600 text-sm leading-relaxed italic mb-4">
+                    &ldquo;Gokill, kaya baru coyyy! Aman banget ini mah, bakal
+                    langganan. Bersih banget!&rdquo;
+                  </p>
+                </div>
+                <div className="relative aspect-[1/1.3] overflow-hidden">
+                  <Image
+                    src="/testimoni-3.png"
+                    alt="Testimoni WhatsApp"
+                    fill
+                    className="object-cover object-top"
+                  />
+                </div>
+              </div>
+
+              {/* Testimonial 4 */}
+              <div className="testimonial-card">
+                <div className="p-6 pb-4">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                      <Star className="w-5 h-5 text-primary" />
+                    </div>
+                    <div>
+                      <p className="font-bold text-gray-900 text-sm">Pelanggan Ciprat Bersih</p>
+                      <div className="flex gap-0.5">
+                        {[...Array(5)].map((_, i) => (
+                          <Star
+                            key={i}
+                            className="w-3 h-3 fill-yellow-400 text-yellow-400"
+                          />
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                  <p className="text-gray-600 text-sm leading-relaxed italic mb-4">
+                    &ldquo;Hasilnya oke banget nih, jadi kinclong sepatu saya.
+                    Padahal udah lama banget ga dicuci, ga ekspek jadi sebersih
+                    ini!&rdquo;
+                  </p>
+                </div>
+                <div className="relative aspect-[1/1.15] overflow-hidden">
+                  <Image
+                    src="/testimoni-4.png"
                     alt="Testimoni WhatsApp"
                     fill
                     className="object-cover object-top"
