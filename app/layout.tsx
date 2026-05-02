@@ -5,11 +5,13 @@ import "./globals.css";
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
-  title: "Ciprat Bersih | Premium Shoe Cleaning",
-  description: "High-quality shoe cleaning with 100% cleanliness guarantee. Free pick-up & delivery in Cempaka Putih & Graha Asri.",
+  title: "Ciprat Bersih | Jasa Cuci Sepatu Premium",
+  description:
+    "Layanan cuci sepatu premium dengan garansi 100% bersih. Harga flat mulai 35K. Free pick-up & delivery di Cempaka Putih & Graha Asri Cikarang.",
 };
 
 export default function RootLayout({
@@ -19,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="id"
       className={`${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
