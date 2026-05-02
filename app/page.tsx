@@ -310,18 +310,18 @@ export default function Home() {
                     showAfter ? "visible-img" : "hidden-img"
                   }`}
                 />
+              </div>
 
-                {/* Label overlay */}
-                <div className="absolute bottom-6 left-6 z-20">
-                  <div
-                    className={`px-5 py-2.5 rounded-xl text-sm font-bold backdrop-blur-md transition-all duration-500 ${
-                      showAfter
-                        ? "bg-primary/90 text-white"
-                        : "bg-black/60 text-white"
-                    }`}
-                  >
-                    {showAfter ? "✨ Sesudah — Seperti Baru!" : "Sebelum — Kotor & Kusam"}
-                  </div>
+              {/* Label below image */}
+              <div className="flex justify-center mt-5">
+                <div
+                  className={`px-6 py-2.5 rounded-full text-sm font-bold transition-all duration-500 ${
+                    showAfter
+                      ? "bg-primary/20 text-primary border border-primary/40"
+                      : "bg-white/10 text-white/70 border border-white/20"
+                  }`}
+                >
+                  {showAfter ? "✨ Sesudah — Seperti Baru!" : "Sebelum — Kotor & Kusam"}
                 </div>
               </div>
 
