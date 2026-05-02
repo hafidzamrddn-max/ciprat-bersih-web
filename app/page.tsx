@@ -35,16 +35,19 @@ export default function Home() {
               <Droplets className="w-4 h-4" />
               <span>Premium Shoe Care</span>
             </div>
-            <h1 className="text-5xl md:text-7xl font-extrabold text-gray-900 tracking-tight mb-6">
-              Step into Freshness
+            <h1 className="text-6xl md:text-8xl font-black text-gray-900 tracking-tighter mb-6">
+              Ciprat Bersih
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
-              Experience the ultimate shoe spa. We bring your favorite pairs back to life.
+              Experience the ultimate shoe refresh. We bring your favorite pairs back to life.
             </p>
             
             <div className="bg-white p-8 rounded-2xl shadow-xl shadow-blue-900/5 max-w-md mx-auto mb-12 border border-blue-50">
               <p className="text-sm text-gray-500 font-medium uppercase tracking-wider mb-2">Flat Price</p>
-              <p className="text-4xl font-bold text-primary mb-6">All Shoes 42K</p>
+              <div className="mb-6 flex flex-col gap-1">
+                <p className="text-3xl font-bold text-primary">Flat shoes 35K</p>
+                <p className="text-xl font-medium text-gray-600">All other shoes 42K-flat</p>
+              </div>
               <a
                 href="https://wa.me/6288212650468"
                 target="_blank"
@@ -111,22 +114,41 @@ export default function Home() {
               <p className="text-gray-500 mt-4 max-w-2xl mx-auto text-lg">Real results from our ultimate shoe spa.</p>
             </div>
             
-            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              {/* Before Image */}
-              <div className="relative group">
-                <div className="aspect-[4/3] bg-gray-200 rounded-2xl overflow-hidden relative shadow-md">
-                  <Image src="/sebelum.jpg" alt="Before Wash" fill className="object-cover" />
+            <div className="space-y-12 max-w-4xl mx-auto">
+              {[
+                { before: "/sebelum.jpg", after: "/sesudah.png" },
+                // Tambahkan gambar lainnya di sini nantinya
+              ].map((item, index) => (
+                <div key={index} className="grid md:grid-cols-2 gap-8">
+                  {/* Before Image */}
+                  <div className="relative group">
+                    <div className="aspect-[4/3] bg-gray-200 rounded-2xl overflow-hidden relative shadow-md">
+                      <Image src={item.before} alt="Before Wash" fill className="object-cover" />
+                    </div>
+                    <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-sm text-white px-4 py-1.5 rounded-lg text-sm font-medium">Before</div>
+                  </div>
+                  
+                  {/* After Image */}
+                  <div className="relative group">
+                    <div className="aspect-[4/3] bg-blue-100 rounded-2xl overflow-hidden relative shadow-lg shadow-blue-900/10 border-2 border-white">
+                      <Image src={item.after} alt="After Wash" fill className="object-cover" />
+                    </div>
+                    <div className="absolute top-4 left-4 bg-primary text-white px-4 py-1.5 rounded-lg text-sm font-medium shadow-sm">After</div>
+                  </div>
                 </div>
-                <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-sm text-white px-4 py-1.5 rounded-lg text-sm font-medium">Before</div>
-              </div>
-              
-              {/* After Image */}
-              <div className="relative group">
-                <div className="aspect-[4/3] bg-blue-100 rounded-2xl overflow-hidden relative shadow-lg shadow-blue-900/10 border-2 border-white">
-                  <Image src="/sesudah.png" alt="After Wash" fill className="object-cover" />
-                </div>
-                <div className="absolute top-4 left-4 bg-primary text-white px-4 py-1.5 rounded-lg text-sm font-medium shadow-sm">After</div>
-              </div>
+              ))}
+            </div>
+
+            <div className="mt-12 text-center">
+              <a
+                href="https://drive.google.com/drive/folders/1blmPamL0XsxFB7i_iuiNU7KFl_edYR01"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-white border-2 border-primary text-primary px-8 py-3 rounded-xl font-bold hover:bg-primary hover:text-white transition-all shadow-md"
+              >
+                <ImageIcon className="w-5 h-5" />
+                More Portfolio
+              </a>
             </div>
           </div>
         </section>
