@@ -294,7 +294,7 @@ export default function Home() {
               >
                 {/* Before Image */}
                 <Image
-                  src="/before-shoe.jpg"
+                  src="/sebelum.jpeg"
                   alt="Sepatu Sebelum Dicuci"
                   fill
                   className={`object-cover ba-image ${
@@ -303,7 +303,7 @@ export default function Home() {
                 />
                 {/* After Image */}
                 <Image
-                  src="/after-shoe.jpg"
+                  src="/sesudah.jpeg"
                   alt="Sepatu Sesudah Dicuci"
                   fill
                   className={`object-cover ba-image absolute inset-0 ${
